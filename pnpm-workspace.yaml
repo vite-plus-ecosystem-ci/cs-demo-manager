@@ -13,8 +13,9 @@ allowBuilds:
 catalog:
   esbuild: 0.28.1
   node-gyp: 13.0.1
-  vite: npm:@voidzero-dev/vite-plus-core@0.2.5
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.8b23a00f98df4a9270ac87a4f80b2ce1b669040b
   vitest: 4.1.10
+  vite-plus: 0.0.0-commit.8b23a00f98df4a9270ac87a4f80b2ce1b669040b
 
 overrides:
   esbuild: 'catalog:'
@@ -32,3 +33,13 @@ peerDependencyRules:
 
 minimumReleaseAgeExclude:
   - '@akiver/cs-demo-analyzer'
+  - vite-plus
+  - '@voidzero-dev/*'
+  - oxlint
+  - '@oxlint/*'
+  - oxlint-tsgolint
+  - '@oxlint-tsgolint/*'
+  - oxfmt
+  - '@oxfmt/*'
+  - vitest
+  - '@vitest/*'
