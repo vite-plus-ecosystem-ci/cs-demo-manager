@@ -14,6 +14,7 @@ const srcFolderPath = path.resolve(currentFolderPath, 'src');
 const rendererFolderPath = path.resolve(srcFolderPath, 'ui');
 
 export default defineConfig({
+  test: { clearMocks: false },
   staged: {
     '*': 'vp check --fix',
   },
