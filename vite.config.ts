@@ -152,6 +152,11 @@ export default defineConfig({
       'react/react-in-jsx-scope': 'error',
       'react/require-render-return': 'error',
       'react/rules-of-hooks': 'error',
+      // React Compiler already skips these imperative UI paths; keep its diagnostics visible.
+      'react/incompatible-library': 'warn',
+      'react/immutability': 'warn',
+      'react/refs': 'warn',
+      'react/purity': 'warn',
       // It reports false positives for translations and unlike the eslint-plugin-react rule, it doesn't allow to ignore
       // specific characters.
       'react/no-unescaped-entities': 'off',
@@ -287,6 +292,11 @@ export default defineConfig({
       'csdm/no-top-level-arrow-functions': 'error',
     },
     overrides: [
+      {
+        files: ['**/*.ts', '**/*.tsx'],
+        // TypeScript checks duplicate declarations and permits our type/value pairs.
+        rules: { 'no-redeclare': 'off' },
+      },
       {
         files: ['src/**/*.test.ts', 'src/node/**', 'src/server/**', 'src/cli/**', 'src/electron-main/**'],
         rules: {
