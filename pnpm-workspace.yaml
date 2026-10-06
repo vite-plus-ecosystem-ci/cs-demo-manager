@@ -14,21 +14,18 @@ allowBuilds:
 
 catalog:
   node-gyp: 13.1.0
-  vite: npm:@voidzero-dev/vite-plus-core@1.0.0
-  vitest: 5.0.3
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.7cb75b46f7a73413ee0803eaac3f6a6b6763f158
+  vite-plus: 0.0.0-commit.7cb75b46f7a73413ee0803eaac3f6a6b6763f158
 
 overrides:
   node-gyp: 'catalog:'
-  vite: 'catalog:'
-  vitest: 'catalog:'
+  vite@*: 'catalog:'
 
 peerDependencyRules:
   allowAny:
     - vite
-    - vitest
   allowedVersions:
     vite: '*'
-    vitest: '*'
 
 minimumReleaseAgeExclude:
   - '@akiver/cs-demo-analyzer'
@@ -37,3 +34,13 @@ minimumReleaseAgeExclude:
   - framer-motion@13.4.3
   - motion@13.4.3
   - undici@8.11.1
+  - vite-plus
+  - '@voidzero-dev/*'
+  - oxlint
+  - '@oxlint/*'
+  - oxlint-tsgolint
+  - '@oxlint-tsgolint/*'
+  - oxfmt
+  - '@oxfmt/*'
+  - vitest
+  - '@vitest/*'
