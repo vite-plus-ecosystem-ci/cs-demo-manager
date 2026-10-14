@@ -14,21 +14,18 @@ allowBuilds:
 
 catalog:
   node-gyp: 13.1.0
-  vite: npm:@voidzero-dev/vite-plus-core@1.0.0
-  vitest: 5.0.3
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.3b99001a24f162be6a4478c3b97f3d0eb81c96c8
+  vite-plus: 0.0.0-commit.3b99001a24f162be6a4478c3b97f3d0eb81c96c8
 
 overrides:
   node-gyp: 'catalog:'
-  vite: 'catalog:'
-  vitest: 'catalog:'
+  vite@*: 'catalog:'
 
 peerDependencyRules:
   allowAny:
     - vite
-    - vitest
   allowedVersions:
     vite: '*'
-    vitest: '*'
 
 minimumReleaseAgeExclude:
   # ecosystem-ci smoke test: preview builds and freshly pinned toolchain packages
@@ -52,3 +49,5 @@ minimumReleaseAgeExclude:
   - framer-motion@13.4.3
   - motion@13.4.3
   - undici@8.11.1
+  - vitest
+  - '@vitest/*'
