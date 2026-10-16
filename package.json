@@ -131,8 +131,7 @@
     "unzipper": "0.12.5",
     "vdf-parser": "1.2.1",
     "vite": "catalog:",
-    "vite-plus": "1.0.0",
-    "vitest": "catalog:",
+    "vite-plus": "catalog:",
     "wavesurfer.js": "8.0.1",
     "ws": "8.22.0"
   },
