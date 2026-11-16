@@ -14,21 +14,18 @@ allowBuilds:
 
 catalog:
   node-gyp: 13.1.0
-  vite: npm:@voidzero-dev/vite-plus-core@1.5.1
-  vitest: 5.1.0
+  vite: npm:@voidzero-dev/vite-plus-core@0.0.0-commit.309b96aaf065d95452ca218076c666671cf36440
+  vite-plus: 0.0.0-commit.309b96aaf065d95452ca218076c666671cf36440
 
 overrides:
   node-gyp: 'catalog:'
-  vite: 'catalog:'
-  vitest: 'catalog:'
+  vite@*: 'catalog:'
 
 peerDependencyRules:
   allowAny:
     - vite
-    - vitest
   allowedVersions:
     vite: '*'
-    vitest: '*'
 
 minimumReleaseAgeExclude:
   # ecosystem-ci smoke test: preview builds and freshly pinned toolchain packages
@@ -53,3 +50,5 @@ minimumReleaseAgeExclude:
   - csgo-sharecode
   - '@akiver/csgo-voice-extractor'
   - electron@45.3.0
+  - tsrs
+  - '@tsrs/*'

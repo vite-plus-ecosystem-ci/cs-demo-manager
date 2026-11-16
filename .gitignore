@@ -28,3 +28,4 @@ src/ui/translations/*
 !src/ui/translations/en
 src/electron-main/translations/*
 !src/electron-main/translations/en
+.vitest/
